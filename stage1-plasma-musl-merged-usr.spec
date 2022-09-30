@@ -5,6 +5,7 @@ rel_type: default
 profile: local:plasma-musl-merged-usr
 snapshot: 2022.09.30
 source_subpath: default/stage3-amd64-musl-latest
+chost: x86_64-gentoo-linux-musl
 compression_mode: pixz
 update_seed: yes
 update_seed_command: --update --deep --newuse @world
