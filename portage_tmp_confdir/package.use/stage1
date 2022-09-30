@@ -1,0 +1,22 @@
+# For stage building, we cannot be sure the final unpack destination will have
+# xattr/fcaps support.  To be safe, we build stages without filecaps, but allow
+# filecaps to be turned back on @ next full world upgrade.  The ebuilds using
+# fcaps eclass will have more logic to safely fall back in case of missing
+# support.
+
+*/* -filecaps
+
+# this makes only a difference for the "desktop" stages
+dev-db/sqlite -icu
+dev-lang/python -bluetooth
+
+# required by sys-libs/libselinux-2.7
+dev-libs/libpcre static-libs
+
+# required by dev-vcs/git
+dev-libs/libpcre2 jit
+
+# compilers from stage1 do not have openmp capability, so turn this off
+# here to avoid failures in stage3
+app-crypt/libb2 -openmp
+app-portage/portage-utils -openmp
