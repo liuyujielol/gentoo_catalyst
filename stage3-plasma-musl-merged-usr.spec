@@ -1,0 +1,12 @@
+subarch: amd64
+target: stage3
+version_stamp: openrc-plasma-musl-merged-usr-2022.09.30
+rel_type: default
+profile: local:plasma-musl-merged-usr
+snapshot: 2022.09.30
+source_subpath: default/stage1-amd64-openrc-plasma-musl-merged-usr-2022.09.30
+compression_mode: pixz
+portage_confdir: /tmp/portage_tmp_confdir
+portage_overlay: /var/db/repos/local
+#portage_confdir: @REPO_DIR@/releases/portage/stages
+#portage_prefix: releng
