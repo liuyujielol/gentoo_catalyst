@@ -1,0 +1,2 @@
+dev-lang/rust rls rust-src rustfmt clippy system-bootstrap system-llvm
+>=dev-lang/rust-1.64.0 rust-analyzer
